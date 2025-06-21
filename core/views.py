@@ -1,24 +1,37 @@
 from django.shortcuts import render, HttpResponse
 from .data import orders
 
-# Create your views here.
 def landing(request):
-    return HttpResponse('<h1>Главная страница<h1>')
+    """
+    Главная страница.
+    Отображает шаблон landing.html.
+    """
+    return render(request, 'landing.html') 
 
 def thanks(request):
-    return render(request, 'thanks.html')
-
+    """
+    Страница благодарности.
+    Отображает шаблон thanks.html.
+    """
+    return render(request, 'thanks.html') 
 def orders_list(request):
-    return render(request, 'orders_list.html', context=context)
+    """
+    Список заказов.
+    Отображает шаблон orders_list.html, передавая данные о заказах.
+    """
+    context = {'orders': orders}  
+    return render(request, 'orders_list.html', context)
 
 def order_detail(request, order_id):
-    order = [order for order in orders if order['id'] == order_id]
+    """
+    Страница деталей заказа.
+    Отображает шаблон order_detail.html, передавая данные о конкретном заказе.
+    Если заказ не найден, возвращает HttpResponse с сообщением об ошибке.
+    """
     try:
-        order = order[0]
-        context = {
-            'order': order,
-            }
-    except IndexError:
+        # Попытка найти заказ с заданным ID
+        order = next(order for order in orders if order['id'] == order_id)
+        context = {'order': order}
+        return render(request, 'order_detail.html', context)
+    except StopIteration:  # Заказ не найден
         return HttpResponse(f'Заказ с id={order_id} не найден')
-    else:
-        return render(request, 'order_detail.html', context=context)

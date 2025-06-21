@@ -1,0 +1,202 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #0056b3; 
+}
+
+
+.orders-list-container body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.orders-list-container .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-list-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.orders-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-list-container th, .orders-list-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-list-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #555;
+}
+
+.orders-list-container tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.orders-list-container a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.orders-list-container a:hover {
+    text-decoration: underline;
+}
+
+.orders-list-container .status-новый {
+    color: darkorange;
+}
+
+.orders-list-container .status-в-обработке {
+    color: cornflowerblue;
+}
+
+.orders-list-container .status-завершен {
+    color: forestgreen;
+}
+
+.orders-list-container .status-отменен {
+    color: firebrick;
+}
+
+
+/* Стили для деталей заказа */
+.order-detail-container body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.order-detail-container .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-detail-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-detail-container p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.order-detail-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.order-detail-container li {
+    margin-bottom: 5px;
+}
+
+.order-detail-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.order-detail-container a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для страницы благодарности */
+.thanks-container body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center; 
+}
+
+.thanks-container .container {
+    max-width: 500px;
+    margin: 50px auto; 
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thanks-container h1 {
+    color: #4CAF50; 
+    margin-bottom: 20px;
+}
+
+.thanks-container p {
+    font-size: 1.2em; 
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.thanks-container a {
+    display: inline-block; 
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.thanks-container a:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо!</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}"> {% comment %} Подключаем CSS {% endcomment %}
+</head>
+<body>
+    <div class="thanks-container">  <!-- Класс-контейнер -->
+        <div class="container">
+            <h1>Спасибо за ваш заказ!</h1>
+            <p>Мы свяжемся с вами в ближайшее время.</p>
+            <a href="{% url 'landing' %}">Вернуться на главную</a>
+        </div>
+    </div>
+    <script src="{% static 'main.js' %}"></script> {% comment %} Подключаем JavaScript {% endcomment %} 
+</body>
+</html>
