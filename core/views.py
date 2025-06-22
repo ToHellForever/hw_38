@@ -42,6 +42,7 @@ def order_detail(request, order_id):
         order = next(order for order in orders if order['id'] == order_id)
         # Добавляем master_name в заказ
         order["master_name"] = master_dict.get(order["master_id"], "Неизвестный мастер")
+        # Передаем данные о заказах в контекст
         context = {'order': order}
         return render(request, 'order_detail.html', context)
     except StopIteration:  # Заказ не найден
