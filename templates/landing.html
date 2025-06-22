@@ -1,23 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}"> {% comment %} Подключаем CSS {% endcomment %}
-</head>
-<body>
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
     <div class="container">
         <h1>Добро пожаловать!</h1>
-        <p>Это главная страница проекта</p>
-
-        <h2>Навигация:</h2>
-        <ul>
-            <li><a href="{% url 'orders_list' %}">Список заказов</a></li>
-            <li><a href="{% url 'thanks' %}">Страница благодарности</a></li>
-        </ul>
+        <p>Это главная страница Barbershop.</p>
     </div>
-    <script src="{% static 'main.js' %}"></script> {% comment %} Подключаем JavaScript {% endcomment %}
-</body>
-</html>
+{% endblock %}

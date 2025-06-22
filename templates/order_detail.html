@@ -1,19 +1,14 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Детали заказа</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}"> {% comment %} Подключаем CSS {% endcomment %}
-</head>
-<body>
-    <div class="order-detail-container"> <!-- Класс-контейнер -->
+
+{% block title %}Детали заказа #{{ order.id }}{% endblock %}
+
+{% block content %}
+    <div class="order-detail-container">
         <div class="container">
             <h1>Детали заказа #{{ order.id }}</h1>
-
             <p><b>Имя клиента:</b> {{ order.client_name }}</p>
-            <p><b>Мастер:</b> {{ order.master_id }}</p>
+            <p><b>Мастер:</b> {{ order.master_name }}</p>
             <p><b>Дата:</b> {{ order.date }}</p>
             <p><b>Услуги:</b></p>
             <ul>
@@ -21,10 +16,10 @@
                     <li>{{ service }}</li>
                 {% endfor %}
             </ul>
-            <p><b>Статус:</b> {{ order.status }}</p>
+            <p><b>Статус:</b> 
+                <span class="status-{{ order.status }}">{{ order.status }}</span>
+            </p>
             <a href="{% url 'orders_list' %}">Назад к списку заказов</a>
         </div>
     </div>
-    <script src="{% static 'main.js' %}"></script> {% comment %} Подключаем JavaScript {% endcomment %}
-</body>
-</html>
+{% endblock %}
